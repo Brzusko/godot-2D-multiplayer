@@ -1,0 +1,9 @@
+[configuration]
+entry_symbol = "GDExtensionInit"
+compatibility_minimum = 4.3
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 = "res://lib/it/linux/libIT-d.so"
+macos.debug = "res://lib/it/macos/libIT-d.dylib"
+windows.debug.x86_64 = "res://lib/it/win/IT-d.dll"

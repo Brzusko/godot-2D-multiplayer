@@ -1,0 +1,9 @@
+[configuration]
+entry_symbol = "GDExtensionInit"
+compatibility_minimum = 4.3
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 = "res://lib/it/linux/lib${PROJECT_NAME}-d.so"
+macos.debug = "res://lib/it/macos/lib${PROJECT_NAME}-d.dylib"
+windows.debug.x86_64 = "res://lib/it/win/${LIB_PREFIX}${PROJECT_NAME}-d.dll"
