@@ -5,8 +5,10 @@
 #include "godot_cpp/core/class_db.hpp"
 #include "godot_cpp/core/defs.hpp"
 #include "godot_cpp/godot.hpp"
+#include "godot_cpp/classes/editor_plugin.hpp"
 
 #include "Example.h"
+#include "multi_client_plugin.hpp"
 
 /// @file
 /// Register our classes with Godot.
@@ -30,8 +32,11 @@ namespace
         godot::ClassDB::register_class<Example>();
         godot::ClassDB::register_class<ExampleVirtual>( true );
         godot::ClassDB::register_abstract_class<ExampleAbstract>();
-    }
+        godot::ClassDB::register_class<IT::MultiClientPlugin>();
 
+        godot::EditorPlugins::add_by_type<IT::MultiClientPlugin>();
+    }
+ 
     /// @brief Called by Godot to let us do any cleanup.
     ///
     /// @see GDExtensionInit
@@ -41,6 +46,8 @@ namespace
         {
             return;
         }
+
+        godot::EditorPlugins::remove_by_type<IT::MultiClientPlugin>();
     }
 }
 

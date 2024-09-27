@@ -100,12 +100,6 @@ install( TARGETS ${PROJECT_NAME}
         DESTINATION ${INSTALL_DIR}
 )
 
-# Copy over support files
-install( DIRECTORY "${CMAKE_SOURCE_DIR}/support_files/"
-    DESTINATION ${INSTALL_DIR}
-    PATTERN ".*" EXCLUDE
-)
-
 add_subdirectory( templates )
 
 # ccache
