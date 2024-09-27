@@ -2,10 +2,18 @@
 #include "multi_client_plugin.hpp"
 
 
-namespace IT {
-    void MultiClientPlugin::_bind_methods() {
+namespace IT 
+{
+
+    MultiClientPlugin::MultiClientPlugin()
+    {
     }
-    void MultiClientPlugin::_notification(int inWhat) {
-        godot::UtilityFunctions::print( "Wet" );
+
+    void MultiClientPlugin::_bind_methods()
+    {
+    }
+
+    void MultiClientPlugin::_notification(int inWhat) 
+    {
     }
 }

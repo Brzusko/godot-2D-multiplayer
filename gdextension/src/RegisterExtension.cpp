@@ -22,6 +22,13 @@ namespace
     /// @see GDExtensionInit
     void initializeExtension( godot::ModuleInitializationLevel p_level )
     {
+        if ( p_level == godot::MODULE_INITIALIZATION_LEVEL_EDITOR ) 
+        {
+            godot::ClassDB::register_class<IT::MultiClientPlugin>();
+
+            godot::EditorPlugins::add_by_type<IT::MultiClientPlugin>();
+        }
+
         if ( p_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE )
         {
             return;
@@ -32,9 +39,6 @@ namespace
         godot::ClassDB::register_class<Example>();
         godot::ClassDB::register_class<ExampleVirtual>( true );
         godot::ClassDB::register_abstract_class<ExampleAbstract>();
-        godot::ClassDB::register_class<IT::MultiClientPlugin>();
-
-        godot::EditorPlugins::add_by_type<IT::MultiClientPlugin>();
     }
  
     /// @brief Called by Godot to let us do any cleanup.
@@ -42,12 +46,15 @@ namespace
     /// @see GDExtensionInit
     void uninitializeExtension( godot::ModuleInitializationLevel p_level )
     {
+        if ( p_level == godot::MODULE_INITIALIZATION_LEVEL_EDITOR ) 
+        {
+            godot::EditorPlugins::remove_by_type<IT::MultiClientPlugin>();
+        }
+
         if ( p_level != godot::MODULE_INITIALIZATION_LEVEL_SCENE )
         {
             return;
         }
-
-        godot::EditorPlugins::remove_by_type<IT::MultiClientPlugin>();
     }
 }
 
