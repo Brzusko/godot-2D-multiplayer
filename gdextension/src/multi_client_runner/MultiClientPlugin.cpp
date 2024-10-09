@@ -4,6 +4,7 @@
 
 namespace IT 
 {
+    MultiClientPlugin* MultiClientPlugin::m_instance = nullptr;
 
     MultiClientPlugin::MultiClientPlugin()
     {
