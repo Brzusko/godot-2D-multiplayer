@@ -8,6 +8,7 @@ namespace IT
 
     MultiClientPlugin::MultiClientPlugin()
     {
+        m_instance = this;
     }
 
     void MultiClientPlugin::_bind_methods()

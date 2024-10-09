@@ -41,7 +41,7 @@ namespace
         godot::ClassDB::register_class<ExampleVirtual>( true );
         godot::ClassDB::register_abstract_class<ExampleAbstract>();
 
-        godot::ClassDB::register_class<IT_UI::RegexLineEdit>();
+        godot::ClassDB::register_class<IT::RegexLineEdit>();
     }
  
     /// @brief Called by Godot to let us do any cleanup.
