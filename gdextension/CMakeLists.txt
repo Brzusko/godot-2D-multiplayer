@@ -25,6 +25,7 @@ set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 if (WIN32)
     set(INSTALL_DIR "${CMAKE_SOURCE_DIR}/../godot/lib/it/win")
+    add_compile_options(/EHsc)
 endif()
 
 if (APPLE)

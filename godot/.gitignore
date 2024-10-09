@@ -16,3 +16,4 @@ mono_crash.*.json
 /lib/it/macos/
 /lib/it/win/
 /lib/it/linux/
+/lib/it/IT.gdextension
