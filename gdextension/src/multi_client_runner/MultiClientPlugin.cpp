@@ -1,5 +1,5 @@
 #include "godot_cpp/variant/utility_functions.hpp"
-#include "multi_client_plugin.hpp"
+#include "MultiClientPlugin.hpp"
 
 
 namespace IT 

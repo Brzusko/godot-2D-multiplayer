@@ -6,7 +6,7 @@ using namespace godot;
 namespace IT
 {
     
-    class MultiClientPlugin : public godot::EditorPlugin
+    class MultiClientPlugin : public EditorPlugin
     {
     private:
         GDCLASS(MultiClientPlugin, EditorPlugin)

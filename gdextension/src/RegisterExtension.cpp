@@ -8,7 +8,8 @@
 #include "godot_cpp/classes/editor_plugin.hpp"
 
 #include "Example.h"
-#include "multi_client_plugin.hpp"
+#include "MultiClientPlugin.hpp"
+#include "RegexLineEdit.hpp"
 
 /// @file
 /// Register our classes with Godot.
@@ -39,6 +40,8 @@ namespace
         godot::ClassDB::register_class<Example>();
         godot::ClassDB::register_class<ExampleVirtual>( true );
         godot::ClassDB::register_abstract_class<ExampleAbstract>();
+
+        godot::ClassDB::register_class<IT_UI::RegexLineEdit>();
     }
  
     /// @brief Called by Godot to let us do any cleanup.
