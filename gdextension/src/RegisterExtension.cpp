@@ -10,6 +10,7 @@
 #include "Example.h"
 #include "MultiClientPlugin.hpp"
 #include "RegexLineEdit.hpp"
+#include "MultiClientUI.hpp"
 
 /// @file
 /// Register our classes with Godot.
@@ -26,6 +27,7 @@ namespace
         if ( p_level == godot::MODULE_INITIALIZATION_LEVEL_EDITOR ) 
         {
             godot::ClassDB::register_class<IT::MultiClientPlugin>();
+            godot::ClassDB::register_class<IT::MultiClientUI>();
 
             godot::EditorPlugins::add_by_type<IT::MultiClientPlugin>();
         }
