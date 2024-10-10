@@ -1,3 +1,4 @@
+@tool
 extends MultiClientUI;
 class_name SimpleMultiClientUI;
 

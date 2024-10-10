@@ -18,6 +18,7 @@ _submit_button = NodePath("CreateClients")
 _clear_button = NodePath("KillClients")
 
 [node name="ClientsCount" type="RegexLineEdit" parent="SimpleMultiClientUI"]
+"Regex Pattern" = "^(|[1-9]\\d*)$"
 layout_mode = 2
 
 [node name="CreateClients" type="Button" parent="SimpleMultiClientUI"]
