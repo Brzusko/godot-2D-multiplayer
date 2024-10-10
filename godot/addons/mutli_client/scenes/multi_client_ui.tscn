@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4d3dgttw5efu"]
+
+[ext_resource type="Script" path="res://addons/mutli_client/scripts/multi_client_ui.gd" id="1_q45ir"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.048
+offset_left = 4.0
+offset_bottom = -0.104
+grow_horizontal = 2
+
+[node name="SimpleMultiClientUI" type="MultiClientUI" parent="." node_paths=PackedStringArray("_regex_line_edit", "_submit_button", "_clear_button")]
+layout_mode = 2
+script = ExtResource("1_q45ir")
+_regex_line_edit = NodePath("ClientsCount")
+_submit_button = NodePath("CreateClients")
+_clear_button = NodePath("KillClients")
+
+[node name="ClientsCount" type="RegexLineEdit" parent="SimpleMultiClientUI"]
+layout_mode = 2
+
+[node name="CreateClients" type="Button" parent="SimpleMultiClientUI"]
+layout_mode = 2
+text = "Create Clients"
+
+[node name="Separator" type="Control" parent="SimpleMultiClientUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="KillClients" type="Button" parent="SimpleMultiClientUI"]
+layout_mode = 2
+text = "Kill Clients"
