@@ -1,23 +1,21 @@
 #pragma once
 #include "godot_cpp/classes/editor_plugin.hpp"
-#include "ProcessRunner.hpp"
 
 using namespace godot;
 
 namespace IT
 {
-    class ProcessRunner;
+    class Control;
     
     class MultiClientPlugin : public EditorPlugin
     {
-    private:
         GDCLASS(MultiClientPlugin, EditorPlugin)
-
+    private:
         static MultiClientPlugin* m_instance;
+        StringName m_MainUIPath = "res://addons/mutli_client/scenes/multi_client_ui.tscn";
+        godot::Control* m_MainUI;
 
     protected:
-        ProcessRunner m_runner;
-
         static void _bind_methods();
         void _notification( int inWhat );
 
