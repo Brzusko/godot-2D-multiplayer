@@ -24,7 +24,7 @@ namespace IT
 		m_ProcessHookContainer = new ProcessHook[count];
 		m_ArraySize = count;
 
-		for (int i = 0; i < count; i++)
+		for (size_t i = 0; i < count; i++)
 		{
 			int32_t pid = -1;
 
@@ -62,7 +62,7 @@ namespace IT
 		if (m_ProcessHookContainer == nullptr)
 			return false;
 
-		for (int i = 0; i < m_ArraySize; i++)
+		for (size_t i = 0; i < m_ArraySize; i++)
 		{
 			ProcessHook processHook = m_ProcessHookContainer[i];
 			if (processHook.IsProcessRunning())
